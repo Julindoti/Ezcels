@@ -25,7 +25,7 @@ public class ProdutoService {
 			row.createCell(0).setCellValue(p.getName());
 			row.createCell(1).setCellValue(p.getPrice());
 			row.createCell(2).setCellValue(p.getWeight());
-			row.createCell(3).setCellValue(p.getQuanitty());
+			row.createCell(3).setCellValue(p.getQuantity());
 		}
 		
 	}

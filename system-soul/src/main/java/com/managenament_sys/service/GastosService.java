@@ -21,6 +21,7 @@ public class GastosService {
 			row.createCell(0).setCellValue(g.getName());
 			row.createCell(1).setCellValue(g.getValue());
 			row.createCell(2).setCellValue(g.getWeight());
+			
 		}
 	}
 

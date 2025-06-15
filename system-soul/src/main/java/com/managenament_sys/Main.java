@@ -19,19 +19,21 @@ public class Main {
 			Usuario fabiana = new Usuario("Fabiana", "FA2016@GMAIL.COM", "FABIANA876", Levels.ADMIN);
 			Usuario gabi = new Usuario("GABI", "GABI190@GMAIL.COM", "FABIANA876", Levels.ADMIN);
 			
-			DatabaseService.saveUsuario(nicole);
-			DatabaseService.saveUsuario(fabiana);
-			DatabaseService.saveUsuario(gabi);
+		    DatabaseService.saveUsuario(fabiana); 
+		    List<Usuario> users= DatabaseService.getAllUsuarios();
+		    System.out.println(users);
 			
 			// Create initial products
 			Produto ovo1 = new Produto("OVO-1A", 30, 70, 900, new Date());
 			Produto ovo2 = new Produto("OVO-2A", 60, 80, 300, new Date());
+			Produto ovo3 = new Produto("OVO-3A", 90, 50, 300, new Date());
 			
 			DatabaseService.saveProduto(ovo1);
 			DatabaseService.saveProduto(ovo2);
+			DatabaseService.saveProduto(ovo3);
 			
 			// Create initial expenses
-			Gastos gasto1 = new Gastos("LOTE-1A", 17.00, new Date(), 1000);
+			Gastos gasto1 = new Gastos("LOTE-1A", 17.00, new Date(), 1000, 10);
 			DatabaseService.saveGasto(gasto1);
 			
 			// Create initial sales

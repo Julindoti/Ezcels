@@ -8,7 +8,7 @@ import com.managenament_sys.Usuario;
 public class UsuarioService {
 	
 	
-	public static void UpUser(List <Usuario> user) {
+	/*public static void UpUser(List <Usuario> user) {
 		
 		   List <Usuario> UP = Usuario.users;
 		   Scanner input = new Scanner(System.in);
@@ -30,6 +30,6 @@ public class UsuarioService {
 			   }
 		   }
 		
-	}
+	}*/
 
 }

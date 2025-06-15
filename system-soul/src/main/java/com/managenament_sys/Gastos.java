@@ -22,10 +22,12 @@ public class Gastos {
 	
 	@Column(nullable = false)
 	private int quantity;
+	@Column(nullable= false)
+	private float weight;
 	
 	public Gastos() {}
 	
-	public Gastos(String name, double value, Date date, int quantity) {
+	public Gastos(String name, double value, Date date, int quantity, float weight) {
 		setName(name);
 		setValue(value);
 		setDate(date);
@@ -70,6 +72,13 @@ public class Gastos {
 	
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
+	}
+	public float getWeight(){
+		return weight;
+	}
+	public void setWeight(float weight){
+		this.weight= weight;
+		
 	}
 }
 

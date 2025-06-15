@@ -35,9 +35,9 @@ public class geralManagersheet {
 		UsuarioService u = new UsuarioService();
 		
 		Logincontroller verify = new Logincontroller();
-		List <Usuario>users = Usuario.users;
-		verify.setUser(users);
-		u.UpUser(users);
+		//List <Usuario>users = Usuario.users;
+		//verify.setUser(users);
+		//u.UpUser(users);
 		
 		if (verify.pass == true) {
 			try(Workbook workbook= new XSSFWorkbook()){
@@ -79,11 +79,11 @@ public class geralManagersheet {
 	}
 	public void readSpreadsheet() {
 	   Logincontroller verify = new Logincontroller();
-	   List <Usuario> users= Usuario.users;
-	   verify.setUser(users);
+	   //List <Usuario> users= Usuario.users;
+	   //verify.setUser(users);
 	   
 		if(verify.pass == true) {	
-			System.out.println("Lenndo arquivo" + users.get(0) +"!");
+			//System.out.println("Lenndo arquivo" + users.get(0) +"!");
 		    try(FileInputStream fis = new FileInputStream(xlsxpath)){
 				Workbook workbook = new XSSFWorkbook(fis); 
 				Sheet ProductsSheet= workbook.getSheet("Produtos");
