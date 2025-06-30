@@ -1,0 +1,23 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    shm_size: 150mb
+    environment:
+      POSTGRES_DB: ezcels
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 1234567
+    ports:
+      - 5433:5432
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+
+  
