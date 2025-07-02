@@ -18,3 +18,9 @@ CONCERTOS E MELHORIAS
 >Receber resposfa de confirmaçaõ de conexão com a API de forma crua
 >Criar classes DTOs
 >Melhoria na interface do javafx (Pagina inicial de abertura, melhoria do GUI no geral)
+
+CODIGO 
+
+ADD: classes do FXMLLOADER, toolbar, sidebar etx.
+
+
