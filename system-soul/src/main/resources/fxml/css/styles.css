@@ -1,0 +1,146 @@
+.button{
+	-fx-background-color:blue;
+	-fx-text-fill:white;
+		
+}
+#toolbar{
+	-fx-border-color:black;
+    -fx-translate-y:30;
+	-fx-pref-height:200px;
+	
+	
+	
+}
+.tabs{
+	
+	-fx-text-fill:white;
+    -fx-background-color:black;
+	
+}
+.button:hover{
+	
+	-fx-background-color:darkblue;
+	
+}
+#primary{
+	
+	-fx-background-color: white;
+	-fx-text-fill:black;
+}
+#tab-pane .tab-header-area .tab .tab-content-area  {}
+
+
+#usersTable{
+	-fx-border-color:black;
+}
+.tab{
+		
+}
+.tab-label{
+	-fx-text-fill:black;	
+}
+.tab-label:hover{
+	-fx-text-fill:white;	
+}
+.tab:hover{
+	-fx-background-color:darkblue;
+}
+#sidebar{
+	
+	-fx-border-color:black;
+	-fx-text-alignment:center;
+	-fx-padding:10px;
+	-fx-spacing:10px; 
+	
+}
+#sidebar_menu{
+	
+	-fx-text-alignment:center;
+    -fx-translate-x:50; 
+	-fx-padding:20px;
+	-fx-backgorund-color:gray;
+	-fx-border-color:black;
+	-fx-translate-y:20;
+}
+#title{
+	
+	-fx-border-color:black;
+	-fx-text-alignment:center;
+	-fx-translate-x:50;
+	-fx-translate-y:20;
+	-fx-font-size:18px;
+	-fx-padding:5px;
+	-fx-border-bottom-color:black;
+	-fx-background-color:lightgray;
+	-fx-background-radius:5px;
+	-fx-border-radius:5px;
+	
+	
+	
+}
+#options{
+	-fx-translate-x:20;
+	-fx-translate-y:25;
+	-fx-spacing:40px;
+	-fx-background-color:lightgray;
+	-fx-border-color:black;
+	-fx-border-radius:10px;
+	-fx-padding:10px;
+	-fx-pref-height:30px;
+	-fx-pref-width:150px;
+	-fx-text-alignment:center;
+	-fx-background-radius:15px;
+	-fx-alignment:center;
+	-fx-opacity:0.55;
+}
+#options:hover{
+	
+	-fx-background-color:darkblue;
+	-fx-text-fill:white;
+	-fx-opacity:1.0;
+		
+}
+#resumewin{
+	
+	-fx-min-height:150px;
+	-fx-pref-height:150px;
+	-fx-mmin-width:250px;
+	-fx-pref-width:300px;
+	-fx-border-color:black;
+	
+}
+#containerInput{
+	-fx-translate-y:20;
+	-fx-border-color:black;
+	-fx-spacing:10;
+	-fx-translate-y:370;
+	-fx-text-alignment:center;
+}
+#requestIn{
+	
+	-fx-pref-height:30px;
+	-fx-alignment:center;
+	-fx-text-alignment:center;
+	
+}
+#requestSub{
+	
+	-fx-alignment:center;
+	-fx-pref-height:25px;
+	-fx-pref-width:60px;
+	-fx-translate-x:225;
+	
+}
+#Toolkit{
+	
+	-fx-pref-height:75;
+	-fx-alignment:center;
+	-fx-translate-y:-55;
+	
+}
+#SubLog{
+	
+	-fx-pref-height:100;
+	-fx-background-color:gray;
+	-fx-translate-y:65;
+}

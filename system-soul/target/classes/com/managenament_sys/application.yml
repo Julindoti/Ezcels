@@ -1,0 +1,21 @@
+ server:
+  port: 5432
+
+ spring:
+   datasource:
+     url: jdbc:postgresql://localhost:5433/ezcels
+     username: root
+     password: 1234567
+
+ jpa:
+  hibernate:
+    ddl-auto: update
+  show-sql: true
+
+ google:
+   api:
+     key: ${GOOGLE_API_KEY}
+     url: ${GOOGLE_URL}
+     sheet_id: ${SHEET_ID}
+     sheet_name: Sheet1     
+

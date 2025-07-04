@@ -1,0 +1,19 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx"
+	  xmlns:fx="http://javafx.com/fxml"
+	  stylesheets="@css/styles.css"
+	  style="-f-background-color:gray;" prefWidth="300" fx:id="toolbar" spacing="20">
+      
+     <Label text="TOOLBAR" style="-fx-border-color:black;" alignment="CENTER"/>
+     
+     <fx:include source="RequestInput.fxml" />
+     <VBox style="-fx-border-color:black;" fx:id="Toolkit"></VBox>
+     <VBox style="-fx-border-color:black;" ></VBox>
+     <VBox style="-fx-border-color:blue;" fx:id="SubLog" layoutY="50" ></VBox>
+     
+     
+	
+	</VBox>
