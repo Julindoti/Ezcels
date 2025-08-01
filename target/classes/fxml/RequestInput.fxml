@@ -1,0 +1,13 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox xmlns="http://javafx.com/javafx"
+	  xmlns:fx="http://javafx.com/fxml"
+	  fx:id="containerInput"
+	  stylesheets="@css/styles.css" fx:controller="com.managenament_sys.UI_controllers.FXMLController">
+	  
+	  <TextField text="Digite aqui o que deseja adicionar" fx:id="requestIn"/> 
+	  <Button text="Enviar" fx:id="requestSub"/>
+	  
+	  </VBox>

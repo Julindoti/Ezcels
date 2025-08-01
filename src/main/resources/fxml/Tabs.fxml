@@ -1,0 +1,28 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane fx:controller="com.managenament_sys.UI_controllers.FXMLController" fx:id="tabPane" stylesheets="@css/styles.css" layoutX="20" layoutY="5" prefWidth="800" prefHeight="600"  xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <tabs>
+        <Tab text="Users">
+            <AnchorPane>
+                <TableView fx:id="usersTable" layoutX="10" layoutY="-10" prefWidth="780" prefHeight="540"/>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Produtos" fx:id="produtoTab">
+            <AnchorPane>
+
+                <TableView fx:id="produtosTable" layoutX="10" layoutY="-10" prefWidth="780" prefHeight="540"/>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Gastos">
+            <AnchorPane>
+                <TableView fx:id="gastosTable" layoutX="10" layoutY="-10" prefWidth="780" prefHeight="540"/>
+            </AnchorPane>
+        </Tab>
+        <Tab text="Vendas">
+            <AnchorPane>
+                <TableView fx:id="vendasTable" layoutX="10" layoutY="-10" prefWidth="780" prefHeight="540"/>
+            </AnchorPane>
+        </Tab>
+    </tabs>
+</TabPane>

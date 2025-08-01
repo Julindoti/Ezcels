@@ -1,0 +1,23 @@
+.button{
+	-fx-background-color:blue;
+	-fx-text-fill:white;
+		
+}
+.button:hover{
+	
+	-fx-background-color:darkblue;
+}
+.HBoxes{
+	
+	-fx-background-color: #002b80;
+	-fx-text-fill: white;
+	
+}
+.button_welcome{
+	
+	-fx-background-color: #002b80;
+	-fx-text-fill:white;
+}
+.button_welcome:hover{
+	-fx-opacity:0.87;
+}

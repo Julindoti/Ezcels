@@ -1,0 +1,7 @@
+ debug: true 	
+
+ spring:
+    main:
+        allow-circular-references: true		
+
+

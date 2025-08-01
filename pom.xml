@@ -1,0 +1,218 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.managenament</groupId>
+  <artifactId>system-soul</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+    <properties>
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+  </properties>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.2.5</version>
+  </parent>
+	  <dependencyManagement>
+	  <dependencies>
+	    <dependency>
+	      <groupId>org.springframework.data</groupId>
+	      <artifactId>spring-data-bom</artifactId>
+	      <version>2025.0.1</version>
+	      <scope>import</scope>
+	      <type>pom</type>
+	    </dependency>
+	  </dependencies>
+	</dependencyManagement>	
+  <dependencies>
+	
+	  <!-- Apache HTTP (dependência indireta necessária para alguns tokens) -->
+	
+
+  	 <dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>5.2.5</version>
+	 </dependency>
+	  <dependency>
+        	<groupId>org.apache.poi</groupId>
+        	<artifactId>poi-ooxml</artifactId>
+        	<version>5.2.5</version>
+    </dependency>		  
+	<dependency>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx-controls</artifactId>
+		<version>21</version>
+	</dependency>
+	<dependency>
+		<groupId>org.openjfx</groupId>
+		<artifactId>javafx-fxml</artifactId>
+		<version>21</version>
+	</dependency>
+	 <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-graphics</artifactId>
+        <version>21</version>
+    </dependency>
+     <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-graphics</artifactId>
+        <version>21</version>
+        <classifier>linux</classifier>
+    </dependency>
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-base</artifactId>
+        <version>21</version>
+    </dependency>
+      <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>21</version>       
+             </dependency>		
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <!-- Spring Boot Test (opcional) -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+    </dependency>
+    <dependency>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-webflux</artifactId>
+    </dependency>
+	<dependency>
+	  <groupId>org.springframework.boot</groupId>
+	  <artifactId>spring-boot-starter-data-jpa</artifactId>
+	</dependency>
+
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-jpa</artifactId>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-security</artifactId>
+	</dependency>
+	
+	
+
+  <!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
+	<dependency>
+	    <groupId>org.mapstruct</groupId>
+	    <artifactId>mapstruct</artifactId>
+	    <version>1.4.2.Final</version>
+	</dependency>
+
+	<dependency>
+	    <groupId>org.projectlombok</groupId>
+	    <artifactId>lombok</artifactId>
+	    <version>1.18.30</version>
+	    <scope>provided</scope>
+	</dependency>
+
+  </dependencies>
+  <build>
+    <plugins>
+        <!-- The Apache Maven Compiler Plugin -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version> <!-- It's good practice to specify the version -->
+            <configuration>
+                <source>21</source>
+                <target>21</target>
+                <annotationProcessorPaths>
+                    <path>
+                        <groupId>org.mapstruct</groupId>
+                        <artifactId>mapstruct-processor</artifactId>
+                        <version>1.4.2.Final</version>
+                    </path>
+                    <!-- Also add lombok here if you use it for mapstruct -->
+                    <path>
+                        <groupId>org.projectlombok</groupId>
+                        <artifactId>lombok</artifactId>
+                        <version>1.18.30</version>
+                    </path>
+                </annotationProcessorPaths>
+            </configuration>
+        </plugin>
+
+        <!-- The Spring Boot Maven Plugin -->
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <!-- No need to specify the version; it's inherited from the parent POM -->
+            <configuration>
+                <!-- 
+                  THIS IS THE CRITICAL PART.
+                  This ensures the VM arguments are applied when you type 'mvn spring-boot:run'.
+                -->
+                <jvmArguments> -Djdk.gtk.version=2 --module-path /home/julio/Documentos/JAVA/javafx-sdk-21.0.7/lib  --add-modules javafx.controls,javafx.fxml </jvmArguments>
+            </configuration>
+            <executions>
+                <!-- This part is for creating an executable JAR with 'mvn package' -->
+                <execution>
+                    <goals>
+                        <goal>repackage</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+           <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>3.6.1</version>
+            <executions>
+                <execution>
+                    <id>copy-dependencies</id>
+                    <phase>prepare-package</phase> <!-- Runs before packaging -->
+                    <goals>
+                        <goal>copy-dependencies</goal>
+                    </goals>
+                    <configuration>
+                        <outputDirectory>${project.build.directory}/libs</outputDirectory>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+
+        <!--
+            PLUGIN 2: JPACKAGE MAVEN PLUGIN
+            This is the main plugin. It calls the JDK's jpackage tool.
+        -->
+        <plugin>
+            <groupId>org.panteleyev</groupId>
+            <artifactId>jpackage-maven-plugin</artifactId>
+            <version>1.7.0</version>
+            <configuration>
+                <!-- Application Metadata -->
+                <name>Ezcels</name>
+                <appVersion>1.0.0</appVersion>
+                <vendor>JULIN.LTDA</vendor>
+                <destination>target/dist</destination> <!-- Where to put the final installer -->
+
+                <!-- What to Run -->
+                <module>com.managenament_sys/com.managenament_sys.Main</module>
+                
+                <!-- Where to find the dependencies we copied above -->
+                <modulePaths>
+                    <path>${project.build.directory}/libs</path>
+                </modulePaths>
+                
+                <!-- What to call the final .exe file -->
+                
+                <!-- IMPORTANT: JVM arguments for the final executable -->
+                <javaOptions>
+                    <!-- Example: Set a memory limit for the final app -->
+                    <option>-Xmx2048m</option>
+                </javaOptions>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+</project>

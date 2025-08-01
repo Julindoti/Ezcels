@@ -1,0 +1,65 @@
+#modal_login{
+	
+	-fx-max-height:500;
+	-fx-max-widht:450;
+	-fx-pref-height:500;
+	-fx-pref-widht:450;
+	-fx-alignemnt:center;
+	-fx-text-alignment:center;
+	-fx-padding:40;
+	-fx-border-color:black;
+	-fx-background-color:ghostwhite;
+	
+}
+.vbox{
+	
+	
+    -fx-transalte-y:250;
+	-fx-spacing:50px;
+	-fx-border-color:black;
+	
+	
+}
+.text-field{
+	
+	-fx-border-color:gray;
+	
+}
+.hbox{
+	
+	-fx-translate-x:75;
+	-fx-spacing:20px;
+	-fx-border-color:black;
+	-fx-translate-y:200;
+	
+}
+
+.button{
+	
+	-fx-text-align:center;
+	-fx-text-fill:white;
+	-fx-background-color: royalblue ; 
+	-fx-max-height:30;
+	_fx-padding:7,5;
+	
+}
+.button:hover{
+	
+	-fx-background-color: midnightblue ;
+	
+	
+}
+.prompt-text{
+	
+	-fx-text-fill:black;
+	-fx-opacity:0.85;
+	
+	
+}
+
+
+
+
+
+
+
